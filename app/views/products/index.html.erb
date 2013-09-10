@@ -7,8 +7,8 @@
 <% @products.each do |product| %>
 
 
-	<div class="product-name"><%= link_to product[:name] , "/products/#{product.id}"%></div>
-	<p>Price : <%= product[:price_in_cents]%></p>
+	<h1><%= link_to product[:name] , "/products/#{product.id}"%></h1>
+	<p>Price : <%= product.formatted_price %></p>
 	<p><%= product[:description]%></p>
 
 <% end %>
