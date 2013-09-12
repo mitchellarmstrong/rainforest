@@ -1,17 +1,23 @@
 
+<ul class="sub-nav">
+		<li><%= link_to "NEW PRODUCT", "/products/new" %></li>
+</ul>
 
-<li><%= link_to "New Product", "/products/new" %></li>
-
-<p>
+<div id="product-container-index">
 <% @products.each do |product| %>
 
 
-	<h1><%= link_to product[:name] , "/products/#{product.id}"%></h1>
-	<p>Price : <%= product.formatted_price %></p>
-	<p><%= product[:description]%></p>
+
+	<div id="product-indiv">
+		<p id="product-name-indiv"><%= link_to product[:name] , "/products/#{product.id}"%></p>
+		<p>Price : <%= product.formatted_price %></p>
+		<p><%= product[:description]%></p>
+	</div>
 
 <% end %>
 
-</p>
+
+
+</div>
 
 
